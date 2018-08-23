@@ -1,0 +1,9 @@
+---
+
+- hosts: "{{ group_name }}"
+  gather_facts: false
+  serial: "{{ serial_opts|default('1') }}"
+
+  tasks:
+    - name: Set up multiple authorized keys
+      ping:

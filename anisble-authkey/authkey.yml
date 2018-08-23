@@ -1,0 +1,14 @@
+---
+
+- hosts: "{{ group_name }}"
+  gather_facts: false
+  serial: "{{ serial_opts|default('1') }}"
+
+  tasks:
+    - name: Set up multiple authorized keys
+      authorized_key:
+        user: '{{ user }}'
+        state: present
+        key: '{{ item }}'
+      with_file:
+        - public_keys/ansible.example.com/id_rsa.pub
