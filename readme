@@ -1,3 +1,7 @@
 https://itnext.io/migrating-a-spring-boot-service-to-kubernetes-in-5-steps-7c1702da81b6
 
 https://codelabs.developers.google.com/codelabs/cloud-springboot-kubernetes/index.html?index=..%2F..%2Findex#2
+
+
+kubectl apply -f deployment.yml
+kubectl apply -f service.yml
